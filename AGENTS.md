@@ -70,7 +70,9 @@
 - 제가 고쳐 달라는 곳만 고치고, 나머지는 그대로 둡니다.
 - 「Vercel 에 올려 달라」고 하면 내사이트 폴더에서 `npx vercel --prod` 로 올립니다(Vercel 이 Next.js 를 알아서 알아봅니다). 처음이면 로그인 방법을 한 줄씩 알려 주고, 두 번째부터는 같은 주소로 다시 올립니다. 끝나면 주소를 「브랜드 규칙」의 내 사이트 주소 칸과 data/site.js 의 url 에 적어 둡니다.
 - 「측정 코드를 넣어 달라」고 하면 제가 붙여 준 코드에서 G- 로 시작하는 측정 ID 만 꺼내 data/site.js 의 gaId 에 넣습니다(layout.jsx 가 모든 페이지에 알아서 넣습니다). 코드를 head 에 직접 붙이지 않고, 다른 코드를 만들지 않습니다. 넣은 ID 를 알려 줍니다.
-- 「카톡 미리보기」를 고쳐 달라고 하면 data/site.js 의 name · promise · description · url 이 채워졌는지 보고, 내사이트/public/og-image.png (1200×630, 서비스 이름과 한 줄 약속을 크게)를 만든 뒤 app/layout.jsx 의 metadata.openGraph 에 images: ["/og-image.png"] 를 더합니다. 끝나면 "다시 올려야 카톡에 그림이 보입니다"라고 한 줄 알려 줍니다.
+- 「카톡 미리보기」(og 카드 · 트위터 카드)를 고쳐 달라고 하면 data/site.js 의 name · promise · description · url 이 채워졌는지 보고, `python .agents/skills/start/assets/make_og.py` 로 내사이트/public/og-image.png 를 만듭니다(새 프로그램을 짜지 않음, `python` 이 안 되면 `python3`). og · 트위터 카드 태그는 layout.jsx 가 그림을 알아서 씁니다. 다시 올린 뒤 "카톡에 예전 미리보기가 남아 있으면 카카오 공유 디버거에서 캐시를 지우세요"라고 한 줄 알려 줍니다.
+- 「검색 등록 코드 넣어 주세요」와 함께 제가 붙여 준 메타 태그(구글 google-site-verification · 네이버 naver-site-verification · 빙 msvalidate.01)에서 content="…" 안의 글자만 꺼내 data/site.js 의 verification 의 google · naver · bing 에 넣습니다. 태그를 head 에 직접 붙이지 않습니다. 넣은 뒤 다시 올리고, 사이트 지도 주소 `내 사이트 주소/sitemap.xml` 을 알려 줍니다.
+- 사이트 지도(sitemap.xml)와 robots.txt 는 app/sitemap.js · app/robots.js 가 site.js 의 url 로 저절로 만듭니다. 고치지 않습니다. url 이 비어 있으면 먼저 채웁니다.
 
 # [6] 링크 꼬리표(UTM) 우리 반 규칙표 (10/13 추가)
 - 「링크 꼬리표」를 만들어 달라고 하면 「브랜드 규칙」의 내 사이트 주소 뒤에 아래 규칙으로 붙입니다.

@@ -10,6 +10,7 @@ export const site = {
   maker: "별명", // 만든 사람 별명 (실명 쓰지 않음)
   url: "", // Vercel 에 올린 뒤 받은 주소. 예: https://xxxx.vercel.app
   gaId: "", // 10/13 측정 ID. 예: G-ABC123DEF4
+  verification: { google: "", naver: "", bing: "" }, // 10/13 검색 등록 확인 코드 (content="…" 안의 글자만)
 
   about: {
     who: "누구를 위한 서비스인지 한 문장으로 씁니다.",
