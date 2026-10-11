@@ -1,6 +1,6 @@
 ---
 name: shorts
-description: $cardnews 로 만든 카드 PNG 5장과 자막으로 1080x1920 세로 15초 영상(MP4)을 만들고, 유튜브 설명란에 붙일 설명란.txt(제목·설명·추적 링크)를 저장한다. 1순위 Remotion, 막히면 ffmpeg, 그것도 없으면 CapCut 수동 안내. "쇼츠 만들어줘", "릴스 영상", "15초 영상", "$shorts" 요청에 사용.
+description: 이미 만든 카드뉴스 5장을 한 장에 3초씩 넘기는 15초 세로 영상(MP4)과 유튜브 설명란.txt 를 만든다. "쇼츠 만들어줘", "릴스 영상", "카드뉴스를 영상으로"에 사용. 스토리보드로 글자가 움직이는 20초 영상은 motion 이 맡는다.
 metadata:
   short-description: 15초 세로 영상 + 설명란
 ---
@@ -38,7 +38,7 @@ references/fallback.md 를 읽고 그대로 따릅니다. 세로 그림 5장을 
 `쇼츠_YYYYMMDD/설명란.txt` 에 아래 순서로 씁니다.
 1. 제목: 카드 1장 표지 문장 기반, 검색어 포함 40자 이내
 2. 설명: 2~3줄. 카드에 있는 내용만 씁니다. 근거 숫자를 쓰면 「기관, 연도」를 붙입니다
-3. 링크: 사이트 주소 뒤에 `?utm_source=youtube&utm_medium=shorts` (주소에 이미 `?` 가 있으면 `&` 로 잇기)
+3. 링크: AGENTS.md [6] 규칙표의 유튜브 줄을 따릅니다. 사이트 주소 뒤에 `?utm_source=youtube&utm_medium=shorts&utm_campaign=MMDD_shorts` (주소에 이미 `?` 가 있으면 `&` 로 잇기)
 4. 해시태그: `#Shorts` 와 주제 해시태그 3개
 
 ## 저장

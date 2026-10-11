@@ -4,6 +4,8 @@ const nextConfig = {
   output: "export",
   images: { unoptimized: true },
   devIndicators: false,
+  // 코덱스가 매번 Next.js 문서를 읽느라 느려지지 않게, 내사이트/AGENTS.md 자동 생성을 끈다. 규칙은 위 폴더 AGENTS.md 에 있다.
+  agentRules: false,
 };
 
 export default nextConfig;

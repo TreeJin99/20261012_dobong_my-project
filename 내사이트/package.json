@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@next/third-parties": "16.4.0",
+    "docx": "9.10.0",
     "leaflet": "1.9.4",
     "next": "16.4.0",
     "react": "19.3.0",
