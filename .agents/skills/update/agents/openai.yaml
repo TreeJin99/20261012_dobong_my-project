@@ -1,8 +1,8 @@
 interface:
-  display_name: "운영하기"
-  short_description: "한 문장으로 장소 추가 · 공지 바꾸기 · 다시 올리기"
-  brand_color: "#D24025"
-  default_prompt: "$update 공지 한 줄 바꿔 주세요: "
+  display_name: "4 폼 잇기 · 올리기"
+  short_description: "신청 폼 연결 · Vercel 올리기 · 꼬리표 · 다른 곳에 올리기"
+  brand_color: "#1D4ED8"
+  default_prompt: "$update 로 내사이트를 Vercel 에 올려 주세요"
 
 policy:
   allow_implicit_invocation: true

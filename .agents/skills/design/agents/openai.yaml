@@ -1,8 +1,8 @@
 interface:
-  display_name: "내 사이트 다듬기"
-  short_description: "내가 찾은 사이트 주소나 캡처를 보고 색 · 글꼴 · 여백만 바꾸기"
+  display_name: "3 디자인 다듬기"
+  short_description: "마음에 드는 사이트를 찾아 색 · 글꼴 · 여백 느낌 입히기"
   brand_color: "#0F766E"
-  default_prompt: "$design 으로 이 사이트 느낌으로 내 사이트를 다듬어 주세요"
+  default_prompt: "$design 으로 참고할 사이트를 찾아 내 사이트를 다듬어 주세요"
 
 policy:
   allow_implicit_invocation: true

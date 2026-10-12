@@ -209,3 +209,64 @@ p { margin: 0; }
 .site-footer { border-top: 1px solid var(--line); padding: var(--sp-4) 0; color: var(--ink-2); font-size: var(--fs-small); }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+
+/* ───────── 테마 넷 (data/site.js 의 theme). 색은 --brand 그대로 쓰고, 배치 · 글꼴 · 모서리 · 구획이 바뀜 ───────── */
+
+/* warm 따뜻: 크림 바탕 · 둥근 카드 · 가운데 정렬 첫 화면 · 고운돋움 제목 */
+[data-theme="warm"] { --bg: #FBF6EE; --tint: color-mix(in srgb, var(--brand) 10%, #FBF6EE); --tint-2: color-mix(in srgb, var(--brand) 18%, #FBF6EE); --line: #EADFCF; --radius: 28px; }
+[data-theme="warm"] body { background: var(--bg); }
+[data-theme="warm"] h1, [data-theme="warm"] h2, [data-theme="warm"] h3, [data-theme="warm"] .logo { font-family: "Gowun Dodum", var(--font); font-weight: 400; letter-spacing: -0.02em; }
+[data-theme="warm"] .site-header { background: rgba(251,246,238,.94); }
+[data-theme="warm"] .btn { border-radius: 999px; }
+[data-theme="warm"] .hero { background: transparent; padding: var(--sp-5) 0; }
+[data-theme="warm"] .hero .wrap > div:first-child { background: var(--tint); border-radius: var(--radius); padding: var(--sp-5) var(--sp-4); text-align: center; }
+[data-theme="warm"] .hero h1, [data-theme="warm"] .hero p { margin-left: auto; margin-right: auto; }
+[data-theme="warm"] .hero .btns { justify-content: center; }
+[data-theme="warm"] .pains { display: grid; gap: 12px; }
+[data-theme="warm"] .pains li, [data-theme="warm"] .pains li:first-child { border: 0; background: #fff; border-radius: 20px; padding: 20px 24px; }
+[data-theme="warm"] .features li { border-top: 0; background: #fff; border-radius: var(--radius); padding: var(--sp-3); }
+[data-theme="warm"] .band.tint { background: transparent; }
+[data-theme="warm"] .steps li::before { width: 64px; height: 64px; border-radius: 50%; background: var(--tint-2); font-size: 30px; font-weight: 700; display: grid; place-items: center; }
+[data-theme="warm"] .band.brand { margin: 0 var(--gutter) var(--sp-5); border-radius: var(--radius); }
+
+/* bold 힘 있게: 첫 화면 전체가 내 색 · 아주 큰 블랙한산스 제목 · 굵은 선 */
+[data-theme="bold"] h1, [data-theme="bold"] h2, [data-theme="bold"] .logo { font-family: "Black Han Sans", var(--font); font-weight: 400; letter-spacing: -0.01em; }
+[data-theme="bold"] h1 { font-size: clamp(48px, 13vw, 104px); line-height: 1.08; }
+[data-theme="bold"] h2 { font-size: clamp(36px, 8vw, 60px); }
+[data-theme="bold"] .btn { border-radius: 4px; }
+[data-theme="bold"] .hero { background: var(--brand); color: #fff; padding: var(--sp-6) 0; }
+[data-theme="bold"] .hero .name { color: rgba(255,255,255,.8); }
+[data-theme="bold"] .hero p { color: rgba(255,255,255,.9); }
+[data-theme="bold"] .hero .btn { background: #fff; color: var(--brand-ink); border-color: #fff; }
+[data-theme="bold"] .hero .sample-note { color: rgba(255,255,255,.8); }
+[data-theme="bold"] .pains { counter-reset: p; }
+[data-theme="bold"] .pains li { counter-increment: p; display: grid; grid-template-columns: 64px 1fr; border-bottom: 3px solid var(--ink); }
+[data-theme="bold"] .pains li:first-child { border-top: 3px solid var(--ink); }
+[data-theme="bold"] .pains li::before { content: counter(p, decimal-leading-zero); color: var(--brand); font-weight: 800; }
+[data-theme="bold"] .features li { border-top: 8px solid var(--brand); }
+[data-theme="bold"] .band.tint { background: #111; color: #fff; }
+[data-theme="bold"] .band.tint p, [data-theme="bold"] .band.tint .maker p { color: rgba(255,255,255,.75); }
+[data-theme="bold"] .band.tint .features li { border-top-color: #fff; }
+
+/* calm 차분: 거의 흰 바탕 · 고운바탕 명조 제목 · 넉넉한 여백 · 가는 선 · 각진 버튼 */
+[data-theme="calm"] { --bg: #FAFAF7; --line: #E4E2DC; --radius: 2px; }
+[data-theme="calm"] body { background: var(--bg); }
+[data-theme="calm"] h1, [data-theme="calm"] h2, [data-theme="calm"] h3, [data-theme="calm"] .logo { font-family: "Gowun Batang", serif; font-weight: 700; letter-spacing: -0.01em; }
+[data-theme="calm"] h1 { font-weight: 400; line-height: 1.3; }
+[data-theme="calm"] .site-header { background: rgba(250,250,247,.94); }
+[data-theme="calm"] .btn { border-radius: 2px; background: transparent; color: var(--ink); border-color: var(--ink); }
+[data-theme="calm"] .btn:hover { background: var(--ink); color: #fff; }
+[data-theme="calm"] .hero { background: transparent; padding: var(--sp-6) 0 var(--sp-5); border-bottom: 1px solid var(--line); }
+[data-theme="calm"] .hero .name { color: var(--ink-2); font-weight: 600; letter-spacing: 0.12em; font-size: 15px; }
+[data-theme="calm"] .band { padding: var(--sp-6) 0; }
+[data-theme="calm"] .band.tint { background: transparent; border-top: 1px solid var(--line); }
+[data-theme="calm"] .pains li { font-weight: 400; font-family: "Gowun Batang", serif; }
+[data-theme="calm"] .features li { border-top: 1px solid var(--ink); }
+[data-theme="calm"] .steps li::before { font-family: "Gowun Batang", serif; font-weight: 400; color: var(--ink-2); }
+[data-theme="calm"] .band.brand { background: var(--ink); }
+[data-theme="calm"] .band.brand .btn { color: #fff; border-color: #fff; }
+
+/* 첫 화면 그림(hero.png)이 없으면 한 칸으로 펼침 */
+@media (min-width: 1000px) { .hero .wrap:not(:has(.hero-shot)) { grid-template-columns: minmax(0, 1fr); } }
+[data-theme="warm"] .hero .wrap > div:first-child { max-width: 960px; margin: 0 auto; width: 100%; }

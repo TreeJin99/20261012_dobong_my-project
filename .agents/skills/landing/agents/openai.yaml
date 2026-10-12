@@ -1,0 +1,8 @@
+interface:
+  display_name: "2 랜딩페이지 만들기"
+  short_description: "기획 한 장으로 랜딩페이지를 만들고 느낌 · 레퍼런스 고르기"
+  brand_color: "#C2410C"
+  default_prompt: "$landing 으로 만들어 주세요"
+
+policy:
+  allow_implicit_invocation: true

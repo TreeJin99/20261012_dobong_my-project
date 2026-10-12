@@ -39,16 +39,25 @@ export const metadata = {
   },
 };
 
+// 테마별 제목 글꼴 (구글 폰트). data/site.js 의 theme 으로 고릅니다.
+const THEME_FONT = {
+  warm: "https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap",
+  bold: "https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap",
+  calm: "https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap",
+};
+const theme = site.theme || "clean";
+
 export const viewport = { width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ko">
+    <html lang="ko" data-theme={theme}>
       <head>
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
         />
+        {THEME_FONT[theme] ? <link rel="stylesheet" href={THEME_FONT[theme]} /> : null}
       </head>
       <body>
         <header className="site-header">

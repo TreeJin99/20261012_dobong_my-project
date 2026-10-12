@@ -1,6 +1,7 @@
 // 서비스 이름 · 약속 · 소개 페이지 글은 이 파일에만 있습니다.
 // 여기만 고치면 첫 화면 · 소개 페이지 · 카톡 미리보기 글이 같이 바뀝니다.
 export const site = {
+  theme: "clean", // 디자인 테마 하나: clean 깔끔 · warm 따뜻 · bold 힘 있게 · calm 차분
   stage: "landing", // landing = 소개 랜딩페이지 한 장(수요 조사) · app = 서비스 화면까지 만든 뒤
   type: "map", // 화면 유형 하나: map 지도 · list 목록 · calc 계산기 · quiz 테스트 · log 기록
   name: "내 서비스", // 서비스 이름

@@ -1,0 +1,8 @@
+# 정해진 명령은 허락 창 없이 실행 (프로젝트를 신뢰했을 때만 적용)
+prefix_rule(pattern = ["npm", "install"], decision = "allow", justification = "내사이트 꾸러미 받기")
+prefix_rule(pattern = ["npm", "run", "build"], decision = "allow", justification = "빌드 확인")
+prefix_rule(pattern = ["npm", "run", "dev"], decision = "allow", justification = "화면 띄우기")
+prefix_rule(pattern = ["npx", "vercel"], decision = "allow", justification = "Vercel 에 올리기")
+prefix_rule(pattern = ["node", ".agents/skills/start/assets/make_plan_docx.js"], decision = "allow", justification = "워드 기획서 만들기")
+prefix_rule(pattern = ["python", ".agents/skills/start/assets/make_og.py"], decision = "allow", justification = "미리보기 그림")
+prefix_rule(pattern = ["python3", ".agents/skills/start/assets/make_og.py"], decision = "allow", justification = "미리보기 그림")
