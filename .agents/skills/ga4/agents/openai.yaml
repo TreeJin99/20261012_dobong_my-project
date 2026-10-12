@@ -1,0 +1,8 @@
+interface:
+  display_name: "5 GA4 잇기"
+  short_description: "내 사이트에 GA4 잇고 숫자 확인하기"
+  brand_color: "#B45309"
+  default_prompt: "$ga4 로 내 사이트에 GA4 를 연결해 주세요"
+
+policy:
+  allow_implicit_invocation: true

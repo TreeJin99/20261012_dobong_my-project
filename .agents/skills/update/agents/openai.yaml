@@ -1,6 +1,6 @@
 interface:
   display_name: "4 폼 잇기 · 올리기"
-  short_description: "신청 폼 연결 · Vercel 올리기 · 꼬리표 · 다른 곳에 올리기"
+  short_description: "신청 폼 연결 · Vercel 올리기 · 다른 곳에 올리기"
   brand_color: "#1D4ED8"
   default_prompt: "$update 로 내사이트를 Vercel 에 올려 주세요"
 
