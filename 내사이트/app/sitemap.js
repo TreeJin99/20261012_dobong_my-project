@@ -8,6 +8,7 @@ export default function sitemap() {
   if (!site.url) return [];
   const base = site.url.replace(/\/$/, "");
   const now = new Date();
+  if (site.stage !== "app") return [{ url: `${base}/`, lastModified: now }];
   return [
     { url: `${base}/`, lastModified: now },
     { url: `${base}/about`, lastModified: now },
