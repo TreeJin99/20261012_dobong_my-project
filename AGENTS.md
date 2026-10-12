@@ -77,6 +77,7 @@
 - 「측정 코드를 넣어 달라」고 하면 제가 붙여 준 코드에서 G- 로 시작하는 측정 ID 만 꺼내 data/site.js 의 gaId 에 넣습니다(layout.jsx 가 모든 페이지에 알아서 넣습니다). 코드를 head 에 직접 붙이지 않고, 다른 코드를 만들지 않습니다. 넣은 ID 를 알려 줍니다.
 - 「카톡 미리보기」(og 카드 · 트위터 카드)를 고쳐 달라고 하면 data/site.js 의 name · promise · description · url 이 채워졌는지 보고, `python .agents/skills/start/assets/make_og.py` 로 내사이트/public/og-image.png 를 만듭니다(새 프로그램을 짜지 않음, `python` 이 안 되면 `python3`). og · 트위터 카드 태그는 layout.jsx 가 그림을 알아서 씁니다. 다시 올린 뒤 "카톡에 예전 미리보기가 남아 있으면 카카오 공유 디버거에서 캐시를 지우세요"라고 한 줄 알려 줍니다.
 - 「검색 등록 코드 넣어 주세요」와 함께 제가 붙여 준 메타 태그(구글 google-site-verification · 네이버 naver-site-verification · 빙 msvalidate.01)에서 content="…" 안의 글자만 꺼내 data/site.js 의 verification 의 google · naver · bing 에 넣습니다. 태그를 head 에 직접 붙이지 않습니다. 넣은 뒤 다시 올리고, 사이트 지도 주소 `내 사이트 주소/sitemap.xml` 을 알려 줍니다.
+- 사이트는 서버 없는 파일(정적 사이트)로만 만들어 Vercel 이 아닌 곳(Netlify · Cloudflare Pages · 웹호스팅)에도 그대로 올릴 수 있게 둡니다. 「다른 곳에 올릴 파일로 만들어 주세요」 「내 도메인 연결하고 싶어요」는 $update 기술을 따릅니다. 특정 호스팅에만 되는 기능(서버 함수 · 미들웨어 · 이미지 최적화 서버)을 넣지 않습니다.
 - 사이트 지도(sitemap.xml)와 robots.txt 는 app/sitemap.js · app/robots.js 가 site.js 의 url 로 저절로 만듭니다. 고치지 않습니다. url 이 비어 있으면 먼저 채웁니다.
 
 # [6] 링크 꼬리표(UTM) 우리 반 규칙표 (10/13 추가)
