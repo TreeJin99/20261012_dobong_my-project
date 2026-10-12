@@ -5,7 +5,7 @@
     python .agents/skills/start/assets/make_og.py
 읽는 것: 내사이트/data/site.js 의 name · promise · description, 내사이트/app/globals.css 의 --brand
 만드는 것: 내사이트/public/og-image.png  (layout.jsx 가 있으면 저절로 미리보기에 씀)
-브라우저 창은 띄우지 않는다. 찍는 방법은 카드뉴스 기술의 make_cards.py 를 그대로 빌려 쓴다.
+브라우저 창은 띄우지 않는다. 찍는 방법은 같은 폴더 og/shot.py 를 쓴다.
 """
 import html
 import importlib.util
@@ -16,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path.cwd()
 SITE = ROOT / "내사이트"
-CARD = ROOT / ".agents" / "skills" / "cardnews" / "assets" / "make_cards.py"
+CARD = Path(__file__).resolve().parent / "og" / "shot.py"
 
 spec = importlib.util.spec_from_file_location("make_cards", CARD)
 mc = importlib.util.module_from_spec(spec)

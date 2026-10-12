@@ -90,7 +90,7 @@
 | 네이버 블로그 | naver_blog | post |
 | 유튜브 | youtube | shorts |
 
-- utm_campaign 은 「날짜_내용」 (예: 1013_cardnews). 날짜는 오늘 월일 네 자리. 내용을 말하지 않으면 cardnews 로 씁니다.
+- utm_campaign 은 「날짜_내용」 (예: 1013_profile). 날짜는 오늘 월일 네 자리. 내용을 말하지 않으면 profile 로 씁니다.
 - utm_content 는 같은 곳에 링크가 여러 개일 때만 (예: card5, profile).
 - 결과는 채널 이름과 링크를 한 줄씩 보여 주고, 「작업파일/꼬리표링크.md」에도 적어 둡니다.
 
