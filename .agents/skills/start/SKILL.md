@@ -19,8 +19,8 @@ metadata:
 
 ## 0. 폴더 확인
 이 폴더에 AGENTS.md 와 「[5]」 규칙, 내사이트 폴더가 있는지 본다. 없으면 아래 한 줄만 말하고 멈춘다.
-「스타터 킷이 아직 없어요. https://github.com/TreeJin99/dobong-ai-marketer 에서 「Code」 → 「Download ZIP」으로 받아 압축을 풀고, 폴더 이름을 my-project 로 바꾼 뒤 입력창 위 「프로젝트 선택」으로 그 폴더를 골라 주세요.」
-AGENTS.md 가 한 겹 아래 폴더(예: my-project/dobong-ai-marketer-main/)에 있으면 「폴더가 한 겹 더 들어가 있어요. 입력창 위 「프로젝트 선택」으로 안쪽 폴더를 다시 골라 주세요.」라고만 말하고 멈춘다.
+「스타터 킷이 아직 없어요. https://github.com/TreeJin99/20261012-dobong-ai-marketer 에서 「Code」 → 「Download ZIP」으로 받아 압축을 풀고, 폴더 이름을 my-project 로 바꾼 뒤 입력창 위 「프로젝트 선택」으로 그 폴더를 골라 주세요.」
+AGENTS.md 가 한 겹 아래 폴더(예: my-project/20261012-dobong-ai-marketer-main/)에 있으면 「폴더가 한 겹 더 들어가 있어요. 입력창 위 「프로젝트 선택」으로 안쪽 폴더를 다시 골라 주세요.」라고만 말하고 멈춘다.
 
 ## 0-1. 9/14 보고서 가져오기
 이 폴더의 작업파일/ 에 04_보고서.md 가 없으면, 바탕화면(Desktop, 윈도에서는 OneDrive 안 바탕 화면일 수 있음)의 「내프로젝트」 폴더를 찾는다.
