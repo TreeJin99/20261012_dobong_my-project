@@ -30,6 +30,7 @@ export const site = {
       { title: "3단계", text: "마지막 할 일을 한 줄로." },
     ],
     makerWhy: "왜 만들었는지 한 문장으로 씁니다.",
+    faq: [], // 자주 묻는 질문. 예: { q: "무료인가요?", a: "네, 신청은 무료예요." } 비어 있으면 칸이 안 보입니다
     ctaTitle: "나오면 가장 먼저 알려 드릴게요",
     ctaText: "",
     contactLabel: "연락하기 (준비 중)",

@@ -198,6 +198,11 @@ p { margin: 0; }
 .steps li::before { content: counter(s); font-size: 64px; font-weight: 300; line-height: 1; color: var(--brand); letter-spacing: -0.04em; font-variant-numeric: tabular-nums; }
 .steps strong { display: block; font-size: var(--fs-h3); letter-spacing: -0.02em; }
 .steps span { color: var(--ink-2); }
+.faq { margin: 0; max-width: var(--text); }
+.faq div { padding: 20px 0; border-bottom: 1px solid var(--line); }
+.faq div:first-child { border-top: 1px solid var(--line); }
+.faq dt { font-size: var(--fs-h3); font-weight: 650; letter-spacing: -0.02em; margin-bottom: 6px; }
+.faq dd { margin: 0; color: var(--ink-2); }
 .maker { display: flex; align-items: center; gap: var(--sp-3); }
 .maker .photo { flex: none; width: 88px; height: 88px; border-radius: 50%; background: var(--tint-2); color: var(--ink-2); font-size: 13px; display: grid; place-items: center; text-align: center; line-height: 1.3; }
 .maker strong { display: block; font-size: var(--fs-h3); letter-spacing: -0.02em; }

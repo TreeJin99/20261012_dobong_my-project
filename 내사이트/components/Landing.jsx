@@ -1,4 +1,4 @@
-// 서비스 소개 랜딩페이지. 위에서 아래로 여섯 칸.
+// 서비스 소개 랜딩페이지. 위에서 아래로 여섯 칸 (자주 묻는 질문이 있으면 일곱 칸).
 // 글은 data/site.js 의 about 에서 고칩니다. 10/20 광고 도착 페이지로 그대로 씁니다.
 // stage 가 "landing" 이면 버튼이 신청 폼(formUrl)으로 가고, "app" 이면 서비스 화면(/)으로 갑니다.
 import fs from "fs";
@@ -9,6 +9,13 @@ import { site } from "@/data/site";
 
 const A = site.about;
 const isLanding = site.stage !== "app";
+const faq = (A.faq || []).filter((f) => f && f.q && f.a);
+// 자주 묻는 질문을 검색엔진 · AI 가 읽는 형식(FAQPage)으로도 넣습니다.
+const faqLd = faq.length ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+} : null;
 // public/hero.png 가 있으면 첫 화면 오른쪽에 그림으로 넣습니다.
 const hasHero = fs.existsSync(path.join(process.cwd(), "public", "hero.png"));
 
@@ -79,6 +86,19 @@ export default function Landing() {
           </div>
         </div>
       </section>
+
+      {/* 자주 묻는 질문 (faq 가 있을 때만) */}
+      {faq.length ? (
+        <section className="band">
+          <div className="wrap">
+            <h2>자주 묻는 질문</h2>
+            <dl className="faq">
+              {faq.map((f) => <div key={f.q}><dt>{f.q}</dt><dd>{f.a}</dd></div>)}
+            </dl>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+          </div>
+        </section>
+      ) : null}
 
       {/* 6 마지막 버튼 */}
       <section className="band brand">
