@@ -28,11 +28,16 @@ if (!fs.existsSync("AGENTS.md") || !fs.existsSync("내사이트")) {
 }
 
 const done = [];
+const skipped = [];
 for (const rel of REPLACE) {
   const text = await get(rel);
-  fs.mkdirSync(path.dirname(rel), { recursive: true });
-  fs.writeFileSync(rel, text);
-  done.push(rel);
+  try {
+    fs.mkdirSync(path.dirname(rel), { recursive: true });
+    fs.writeFileSync(rel, text);
+    done.push(rel);
+  } catch {
+    skipped.push(rel); // 코덱스가 .agents 폴더를 잠가 두면 건너뜀. 자주 묻는 질문 규칙은 내사이트/AGENTS.md 에도 있어 괜찮음
+  }
 }
 
 // 루트 AGENTS.md: 「나와 내 서비스」 칸은 내 것을 남기고 나머지만 새 판으로
@@ -79,3 +84,4 @@ for (const rel of REPLACE) {
 }
 
 console.log("새 판으로 바꿨어요.\n- " + done.join("\n- "));
+if (skipped.length) console.log("잠겨 있어 건너뛴 파일 (그대로 써도 됩니다):\n- " + skipped.join("\n- "));
