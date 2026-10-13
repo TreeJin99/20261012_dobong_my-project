@@ -31,5 +31,5 @@
 1. 고친 뒤 이 폴더에서 `npm run build`. 오류가 나면 고친 파일 안에서만 바로잡습니다(따옴표 · 쉼표 · 괄호).
 2. 처음 한 번은 `npm install` (node_modules 가 없을 때만).
 3. 화면은 `npm run dev` 로 띄우고 http://localhost:3000 을 알려 줍니다.
-4. 올리기는 `npx vercel --prod`. 받은 주소는 `data/site.js` 의 url 과 루트 AGENTS.md 「내 사이트 주소」에 적습니다.
+4. 올리기는 `$update` 의 순서대로 (로그인 → `npx vercel link --yes --project 영문이름` → `npx vercel --prod --yes`). 폴더 이름이 한글이라 link 없이 올리면 실패합니다. 받은 주소는 `data/site.js` 의 url 과 루트 AGENTS.md 「내 사이트 주소」에 적습니다.
 5. GA4 측정 ID(G- 로 시작)는 `data/site.js` 의 gaId 에만 넣습니다. 검색 등록 확인 코드는 verification 의 google · naver · bing 에 content 값만 넣습니다. 미리보기 그림은 `python .agents/skills/start/assets/make_og.py` (안 되면 `python3`).

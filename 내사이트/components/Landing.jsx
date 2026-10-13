@@ -75,7 +75,7 @@ export default function Landing() {
         <div className="wrap">
           <div className="maker">
             <div className="photo">사진 자리</div>
-            <div><strong>만든 사람 {site.maker}</strong><p>{A.makerWhy}</p></div>
+            <div><strong>{site.maker && site.maker !== "만든 사람" ? `만든 사람 ${site.maker}` : "만든 사람"}</strong><p>{A.makerWhy}</p></div>
           </div>
         </div>
       </section>

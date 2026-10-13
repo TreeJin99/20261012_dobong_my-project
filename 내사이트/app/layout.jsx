@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
         ) : null}
         {children}
         <footer className="site-footer">
-          <div className="wrap">{site.name} · 만든 사람 {site.maker}</div>
+          <div className="wrap">{site.name}{site.maker && site.maker !== "만든 사람" ? ` · 만든 사람 ${site.maker}` : ""}</div>
         </footer>
       </body>
       {site.gaId ? <GoogleAnalytics gaId={site.gaId} /> : null}

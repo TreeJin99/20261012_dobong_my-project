@@ -17,7 +17,7 @@ metadata:
 ## 1. 채우기
 1. `내사이트/data/site.js`
    - theme: 기획의 느낌 (clean · warm · bold · calm). stage 는 "landing" 그대로.
-   - name · promise(한 줄 약속) · description(검색 · 카톡 미리보기용 한 문장) · maker(별명, 없으면 「만든 사람」) · ctaLabel 「써 보고 싶어요」
+   - name · promise(한 줄 약속) · description(검색 · 카톡 미리보기용 한 문장) · maker(사용자가 말한 별명. 없으면 빈 글자 "") · ctaLabel 「써 보고 싶어요」
    - about.who(손님 한 문장) · pains(불편한 순간 2~3줄, 사용자가 쓴 낱말을 살림) · features(기능 셋: 짧은 제목 + 한 줄) · steps(나오면 이렇게 써요 3단계) · makerWhy(만드는 이유 한 줄) · ctaTitle 「나오면 가장 먼저 알려 드릴게요」 · ctaText 한 줄
    - url · gaId · verification · formUrl 은 이미 값이 있으면 그대로 둡니다.
    - 서비스 성격에 맞는 type(map · list · calc · quiz · log)도 적어 둡니다(나중 서비스 화면용).
