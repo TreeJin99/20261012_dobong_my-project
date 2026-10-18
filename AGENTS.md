@@ -39,6 +39,18 @@
 - k-skill(github.com/NomaDamas/k-skill) 기술을 쓸 때 `npx @nomadamas/k-skill update` 나 전체 설치(`--all`)는 실행하지 않음. 125개가 내 컴퓨터 전체에 깔림. 필요한 npm 패키지는 이 폴더에만 설치.
 - 로그인 · 비밀번호 · 키가 필요하다고 하면 멈추고 「강사에게 물어보세요」.
 
+## 링크 꼬리표 (10/20)
+- 「꼬리표 만들어 주세요」면 루트 AGENTS.md 「내 사이트 주소」(없으면 `내사이트/data/site.js` 의 url) 뒤에 `?utm_source=…&utm_medium=…&utm_campaign=…` 을 붙임. 사이트 파일은 고치지 않음.
+- 우리 반 규칙: 전부 영어 소문자 · 띄어쓰기 대신 _ · 한글 없음.
+  | 곳 | utm_source | utm_medium |
+  |---|---|---|
+  | 카카오톡 | kakao | message |
+  | 인스타그램 | instagram | social |
+  | 네이버 블로그 | naver_blog | post |
+  | 유튜브 | youtube | shorts |
+- utm_campaign 은 「월일_내용」(예: 1020_profile). 사용자가 안 말하면 오늘 날짜_profile.
+- 결과는 `작업파일/홍보링크.md` 에 표(쓰는 곳 · 링크)로 쓰고, 화면에도 링크를 한 줄씩 보여 줌.
+
 ## 지킬 것
 - 서버 기능(로그인 · 결제 · 게시판 · 예약 · DB) 없음. 신청은 구글 폼 · 네이버 폼.
 - 말하지 않은 숫자 · 후기 · 경력 지어내지 않기. 실명 · 전화번호 · 주소 대신 별명.
